@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="paddingSmall">4dp</dimen>
+    <dimen name="paddingMedium">8dp</dimen>
+    <dimen name="paddingLarge">16dp</dimen>
+    <dimen name="quoteImageSize">40dp</dimen>
+</resources>

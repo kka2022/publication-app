@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PublicationApp</string>
+    <string name="books">Books</string>
+    <string name="authors">Authors</string>
+    <string name="explore_books">Explore Books</string>
+    <string name="explore_authors">Explore Authors</string>
+    <string name="explore_shops">Explore Shops</string>
+</resources>
