@@ -32,15 +32,15 @@ object DataSource {
     )
 
     val booksList = listOf(
-        Book("1", "Pride and Prejudice", "1"),
-        Book("2", "Sense and Sensibility", "1"),
-        Book("3", "The Great Gatsby", "2"),
-        Book("4", "Tender Is the Night", "2"),
-        Book("5", "1984", "3"),
-        Book("6", "Animal Farm", "3"),
-        Book("7", "Harry Potter and the Sorcerer's Stone", "4"),
-        Book("8", "Harry Potter and the Chamber of Secrets", "4"),
-        Book("9", "War and Peace", "5"),
-        Book("10", "Anna Karenina", "5")
+        Book("1", "The Great Gatsby", "F. Scott Fitzgerald"),
+        Book("2", "To Kill a Mockingbird", "Harper Lee"),
+        Book("3", "1984", "George Orwell"),
+        Book("4", "Pride and Prejudice", "Jane Austen"),
+        Book("5", "The Catcher in the Rye", "J.D. Salinger"),
+        Book("6", "Harry Potter and the Sorcerer's Stone", "J.K. Rowling"),
+        Book("7", "The Hobbit", "J.R.R. Tolkien"),
+        Book("8", "The Lord of the Rings", "J.R.R. Tolkien"),
+        Book("9", "The Da Vinci Code", "Dan Brown"),
+        Book("10", "The Hunger Games", "Suzanne Collins")
     )
 }

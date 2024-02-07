@@ -1,13 +1,10 @@
 package com.example.publicationapp.ui.components
 
-import androidx.annotation.DrawableRes
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -18,18 +15,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.dimensionResource
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.publicationapp.R
+import com.example.publicationapp.data.DataSource
+import com.example.publicationapp.model.Book
 
 @Preview(showBackground = true)
 @Composable
-fun ExploreCard(
-    modifier: Modifier = Modifier,
-    topic: String = "Explore",
-    @DrawableRes imageId: Int = R.drawable.explore_author_image
-) {
+fun BookCard(modifier: Modifier = Modifier, book: Book = DataSource.booksList.first()) {
     Card(
         modifier = modifier
             .fillMaxWidth()
@@ -46,15 +40,15 @@ fun ExploreCard(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Image(
-                    painter = painterResource(id = imageId),
-                    contentDescription = topic,
-                    modifier = Modifier.size(100.dp)
-                )
                 Text(
-                    text = topic,
+                    text = book.name,
                     modifier.padding(dimensionResource(id = R.dimen.paddingMedium)),
                     style = MaterialTheme.typography.headlineMedium
+                )
+                Text(
+                    text = book.author,
+                    modifier.padding(dimensionResource(id = R.dimen.paddingMedium)),
+                    style = MaterialTheme.typography.bodyMedium
                 )
             }
         }
