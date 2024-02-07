@@ -2,7 +2,6 @@ package com.example.publicationapp.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -34,13 +33,11 @@ import com.example.publicationapp.model.Quote
 @Composable
 fun QuoteCard(
     modifier: Modifier = Modifier,
-    quote: Quote = DataSource.quotes.first(),
-    onQuoteCardClick: () -> Unit = {}
+    quote: Quote = DataSource.quotesList.first(),
 ) {
     Card(
         modifier = modifier
-            .padding(dimensionResource(id = R.dimen.paddingSmall))
-            .clickable { onQuoteCardClick() },
+            .padding(dimensionResource(id = R.dimen.paddingSmall)),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
         Box(

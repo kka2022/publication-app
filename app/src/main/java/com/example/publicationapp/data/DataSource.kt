@@ -1,9 +1,11 @@
 package com.example.publicationapp.data
 
+import com.example.publicationapp.model.Author
+import com.example.publicationapp.model.Book
 import com.example.publicationapp.model.Quote
 
 object DataSource {
-    val quotes = listOf<Quote>(
+    val quotesList = listOf<Quote>(
         Quote("The only way to do great work is to love what you do.", "Steve Jobs"),
         Quote("Success is not final, failure is not fatal: It is the courage to continue that counts.", "Winston Churchill"),
         Quote("In three words I can sum up everything I've learned about life: it goes on.", "Robert Frost"),
@@ -14,5 +16,31 @@ object DataSource {
         Quote("The only limit to our realization of tomorrow will be our doubts of today.", "Franklin D. Roosevelt"),
         Quote("Success is stumbling from failure to failure with no loss of enthusiasm.", "Winston S. Churchill"),
         Quote("Life is what happens when you're busy making other plans.", "Allen Saunders")
+    )
+
+    val authorsList = listOf(
+        Author("1", "Jane Austen", listOf("Pride and Prejudice", "Sense and Sensibility")),
+        Author("2", "F. Scott Fitzgerald", listOf("The Great Gatsby", "Tender Is the Night")),
+        Author("3", "George Orwell", listOf("1984", "Animal Farm")),
+        Author("4", "J.K. Rowling", listOf("Harry Potter and the Sorcerer's Stone", "Harry Potter and the Chamber of Secrets")),
+        Author("5", "Leo Tolstoy", listOf("War and Peace", "Anna Karenina")),
+        Author("6", "Mark Twain", listOf("The Adventures of Tom Sawyer", "Adventures of Huckleberry Finn")),
+        Author("7", "J.R.R. Tolkien", listOf("The Hobbit", "The Lord of the Rings")),
+        Author("8", "Agatha Christie", listOf("Murder on the Orient Express", "Death on the Nile")),
+        Author("9", "Stephen King", listOf("The Shining", "It")),
+        Author("10", "Ernest Hemingway", listOf("The Old Man and the Sea", "A Farewell to Arms"))
+    )
+
+    val booksList = listOf(
+        Book("1", "Pride and Prejudice", "1"),
+        Book("2", "Sense and Sensibility", "1"),
+        Book("3", "The Great Gatsby", "2"),
+        Book("4", "Tender Is the Night", "2"),
+        Book("5", "1984", "3"),
+        Book("6", "Animal Farm", "3"),
+        Book("7", "Harry Potter and the Sorcerer's Stone", "4"),
+        Book("8", "Harry Potter and the Chamber of Secrets", "4"),
+        Book("9", "War and Peace", "5"),
+        Book("10", "Anna Karenina", "5")
     )
 }

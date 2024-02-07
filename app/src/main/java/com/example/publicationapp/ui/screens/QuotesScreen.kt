@@ -9,7 +9,7 @@ import com.example.publicationapp.model.Quote
 import com.example.publicationapp.ui.components.QuoteCard
 
 @Composable
-fun QuotesScreen(modifier: Modifier = Modifier, quotes: List<Quote> = DataSource.quotes) {
+fun QuotesScreen(modifier: Modifier = Modifier, quotes: List<Quote> = DataSource.quotesList) {
     LazyColumn(modifier = modifier) {
         items(quotes) {quote ->
             QuoteCard(quote = quote)
