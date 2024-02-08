@@ -10,15 +10,18 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.publicationapp.PublicationScreen
 import com.example.publicationapp.R
+import com.example.publicationapp.data.DataSource
+import com.example.publicationapp.model.Quote
 import com.example.publicationapp.ui.components.ExploreCard
 import com.example.publicationapp.ui.components.QuoteCard
 
 @Preview(showBackground = true)
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier, onCardClick: (String) -> Unit = {}) {
+fun HomeScreen(modifier: Modifier = Modifier, onCardClick: (String) -> Unit = {}, randomQuote: Quote = DataSource.quotesList.first()) {
     Column(modifier = modifier.verticalScroll(rememberScrollState())) {
         QuoteCard(
-            modifier = Modifier.clickable { onCardClick(PublicationScreen.Quotes.name) }
+            modifier = Modifier.clickable { onCardClick(PublicationScreen.Quotes.name) },
+            quote = randomQuote
         )
         ExploreCard(
             modifier = Modifier.clickable { onCardClick(PublicationScreen.Books.name) },

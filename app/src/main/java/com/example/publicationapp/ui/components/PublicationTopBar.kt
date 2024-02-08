@@ -22,8 +22,10 @@ fun PublicationTopBar(
     TopAppBar(
         title = { Text(text = currentScreen.name) },
         navigationIcon = {
-            IconButton(onClick = navigateUp) {
-                Icon(imageVector = Icons.Filled.ArrowBack, contentDescription = null)
+            if (canNavigateUp) {
+                IconButton(onClick = navigateUp) {
+                    Icon(imageVector = Icons.Filled.ArrowBack, contentDescription = null)
+                }
             }
         }
     )
